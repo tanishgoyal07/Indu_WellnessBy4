@@ -11,7 +11,7 @@ class CustomButton extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(50),
+        borderRadius: BorderRadius.circular(30),
         child: Material(
           color: const Color.fromARGB(255, 2, 42, 59),
           child: InkWell(
@@ -24,7 +24,7 @@ class CustomButton extends StatelessWidget {
               alignment: Alignment.center,
               padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: Colors.transparent, width: 4),
               ),
               child: Text(

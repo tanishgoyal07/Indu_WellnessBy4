@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:indu_wellness/constants.dart';
+import 'package:indu_wellness/screens/landing_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,8 +11,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: mainColor,
         automaticallyImplyLeading: false,
-        centerTitle: true,
-        title: const Text("Welcome guest"),
+        title: Text("Hello, $displayName!"),
       ),
       body: const Center(
         child: Text("HomePage"),
