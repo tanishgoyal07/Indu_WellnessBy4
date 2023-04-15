@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:indu_wellness/screens/health_page.dart';
 import 'package:indu_wellness/screens/home_page.dart';
 import 'package:indu_wellness/screens/myth_page.dart';
@@ -44,34 +45,34 @@ class _BottomBarState extends State<BottomBar> {
         children: _screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
+            icon: const Icon(
               Icons.home,
               color: Colors.black,
             ),
-            label: 'Home',
+            label: 'Home'.tr,
           ),
           BottomNavigationBarItem(
-            icon: Icon(
+            icon: const Icon(
               Icons.track_changes,
               color: Colors.black,
             ),
-            label: 'Tracker',
+            label: 'Tracker'.tr,
           ),
           BottomNavigationBarItem(
-            icon: Icon(
+            icon: const Icon(
               Icons.medical_information,
               color: Colors.black,
             ),
-            label: 'Health',
+            label: 'Health'.tr,
           ),
           BottomNavigationBarItem(
-            icon: Icon(
+            icon: const Icon(
               Icons.compress_sharp,
               color: Colors.black,
             ),
-            label: 'Myths',
+            label: 'Myths'.tr,
           ),
         ],
         currentIndex: selectedIndex,

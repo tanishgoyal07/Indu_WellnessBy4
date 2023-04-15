@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:indu_wellness/constants.dart';
 import 'package:indu_wellness/screens/mythbuster_screen.dart';
 
@@ -17,7 +18,7 @@ class _MythPageState extends State<MythPage> {
         backgroundColor: mainColor,
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: const Text("Myth-Buster"),
+        title: Text("Myth-Buster".tr),
       ),
       body: Container(
         padding: const EdgeInsets.all(15),
@@ -52,11 +53,11 @@ class _MythPageState extends State<MythPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text(
-                "You shouldn’t wash your hair during your period.",
+              child: Text(
+                "You shouldn’t wash your hair during your period.".tr,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18.0,
                   color: Colors.white,
                 ),
@@ -75,9 +76,9 @@ class _MythPageState extends State<MythPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Periods are shameful",
+              child: Text("Periods are shameful".tr,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -93,10 +94,10 @@ class _MythPageState extends State<MythPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Women shed impure blood during periods.",
+              child: Text("Women shed impure blood during periods.".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -113,10 +114,10 @@ class _MythPageState extends State<MythPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("If you use a tampon, you lose your virginity.",
+              child: Text("If you use a tampon, you lose your virginity.".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 17.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 17.0, color: Colors.white)),
             ),
           ],
         ),

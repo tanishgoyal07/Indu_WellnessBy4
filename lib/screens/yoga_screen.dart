@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class YogaScreen extends StatefulWidget {
   const YogaScreen({
@@ -33,9 +34,9 @@ class _YogaScreenState extends State<YogaScreen> {
         backgroundColor: const Color.fromARGB(255, 56, 126, 59),
         elevation: 0,
         centerTitle: true,
-        title: const Text(
-          "Yoga Postures",
-          style: TextStyle(fontSize: 16),
+        title: Text(
+          "Yoga Postures".tr,
+          style: const TextStyle(fontSize: 16),
         ),
       ),
       body: SingleChildScrollView(
@@ -45,7 +46,7 @@ class _YogaScreenState extends State<YogaScreen> {
               child: Column(
                 children: [
                   Text(
-                    yogaTitle[0],
+                    yogaTitle[0].tr,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
@@ -55,7 +56,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 10,
                   ),
                   Text(
-                    yoga[0],
+                    yoga[0].tr,
                      style: const TextStyle(
                       fontSize: 16,
                     ),
@@ -68,7 +69,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 20,
                   ),
                   Text(
-                    yogaTitle[1],
+                    yogaTitle[1].tr,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
@@ -78,7 +79,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 10,
                   ),
                   Text(
-                    yoga[1],
+                    yoga[1].tr,
                      style: const TextStyle(
                       fontSize: 16,
                     ),
@@ -91,7 +92,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 20,
                   ),
                   Text(
-                    yogaTitle[2],
+                    yogaTitle[2].tr,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
@@ -101,7 +102,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 10,
                   ),
                   Text(
-                    yoga[2],
+                    yoga[2].tr,
                      style: const TextStyle(
                       fontSize: 16,
                     ),
@@ -114,7 +115,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 20,
                   ),
                   Text(
-                    yogaTitle[3],
+                    yogaTitle[3].tr,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
@@ -124,7 +125,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 10,
                   ),
                   Text(
-                    yoga[3],
+                    yoga[3].tr,
                      style: const TextStyle(
                       fontSize: 20,
                     ),
@@ -137,7 +138,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 20,
                   ),
                   Text(
-                    yogaTitle[4],
+                    yogaTitle[4].tr,
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w600,
@@ -147,7 +148,7 @@ class _YogaScreenState extends State<YogaScreen> {
                     height: 10,
                   ),
                   Text(
-                    yoga[4],
+                    yoga[4].tr,
                      style: const TextStyle(
                       fontSize: 16,
                     ),

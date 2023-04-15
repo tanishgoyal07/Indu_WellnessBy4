@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:indu_wellness/constants.dart';
 
 class GroupChatPage extends StatefulWidget {
@@ -15,7 +16,7 @@ class _GroupChatPageState extends State<GroupChatPage> {
       appBar: AppBar(
         backgroundColor: mainColor,
         centerTitle: false,
-        title: const Text("Saheliyaan" , style: TextStyle(fontSize: 18,),),
+        title: Text("Saheliyaan".tr , style: const TextStyle(fontSize: 18,),),
         actions: [
           PopupMenuButton<String>(
             onSelected: (value) {

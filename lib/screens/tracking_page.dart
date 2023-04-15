@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:indu_wellness/constants.dart';
 
 class TrackingPage extends StatelessWidget {
@@ -11,10 +12,10 @@ class TrackingPage extends StatelessWidget {
         backgroundColor: mainColor,
         automaticallyImplyLeading: false,
         centerTitle: true,
-        title: const Text("Tracking Page"),
+        title: Text("Tracking Page".tr),
       ),
-      body: const Center(
-        child: Text("Tracking Page"),
+      body:  Center(
+        child: Text("Tracking Page".tr),
       ),
     );
   }

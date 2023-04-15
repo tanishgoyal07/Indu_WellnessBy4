@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:indu_wellness/constants.dart';
 import 'package:indu_wellness/main.dart';
 import 'package:indu_wellness/screens/checking.dart';
@@ -19,39 +20,33 @@ class _HomePageState extends State<HomePage> {
       context: context,
       builder: (context) {
         return SimpleDialog(
-          title: const Text("Select Language"),
+          title: Text("Select Language".tr),
           children: [
             SimpleDialogOption(
               padding: const EdgeInsets.all(20),
-              child: const Text(
-                "English",
-                style: TextStyle(
+              child: Text(
+                "English".tr,
+                style: const TextStyle(
                   fontSize: 16,
                 ),
               ),
               onPressed: () {
-                setState(
-                  () {
-                    engLanguage = true;
-                  },
-                );
+                var locale = const Locale('en', 'US');
+                Get.updateLocale(locale);
                 Navigator.of(context).pop();
               },
             ),
             SimpleDialogOption(
               padding: const EdgeInsets.all(20),
-              child: const Text(
-                "Hindi",
-                style: TextStyle(
+              child: Text(
+                "Hindi".tr,
+                style: const TextStyle(
                   fontSize: 16,
                 ),
               ),
               onPressed: () {
-                setState(
-                  () {
-                    engLanguage = false;
-                  },
-                );
+                var locale = const Locale('hi', 'IN');
+                Get.updateLocale(locale);
                 Navigator.of(context).pop();
               },
             ),
@@ -67,13 +62,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: mainColor,
         automaticallyImplyLeading: false,
-        title: Text("Hello, $displayName!"),
+        title: Text("Hello, ".tr + displayName!),
         actions: [
           TextButton(
             onPressed: languageDialoxBox,
-            child: const Text(
-              "Language",
-              style: TextStyle(
+            child: Text(
+              "Language".tr,
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
@@ -113,8 +108,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Menstrual Hygiene",
-                  style: TextStyle(fontSize: 20.0, color: Colors.white)),
+              child: Text("Menstrual Hygiene".tr,
+                  style: const TextStyle(fontSize: 20.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -129,8 +124,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Menstrual Precautions",
-                  style: TextStyle(fontSize: 20.0, color: Colors.white)),
+              child: Text("Menstrual Precautions".tr,
+                  style: const TextStyle(fontSize: 20.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -147,8 +142,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("What is a period and why do we have them?",
-                  style: TextStyle(fontSize: 20.0, color: Colors.white)),
+              child: Text("What is a period and why do we have them?".tr,
+                  style: const TextStyle(fontSize: 20.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -163,8 +158,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("What does a period feel like?",
-                  style: TextStyle(fontSize: 19.0, color: Colors.white)),
+              child: Text("What does a period feel like?".tr,
+                  style: const TextStyle(fontSize: 19.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -179,8 +174,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Does having your period hurt?",
-                  style: TextStyle(fontSize: 19.0, color: Colors.white)),
+              child: Text("Does having your period hurt?".tr,
+                  style: const TextStyle(fontSize: 19.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -198,9 +193,9 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text(
-                  "What are sanitary pads? How to use and dispose of them?",
-                  style: TextStyle(fontSize: 20.0, color: Colors.white)),
+              child: Text(
+                  "What are sanitary pads? How to use and dispose of them?".tr,
+                  style: const TextStyle(fontSize: 20.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -215,9 +210,9 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("What If I Skip a Period?",
+              child: Text("What If I Skip a Period?".tr,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 19.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 19.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -233,8 +228,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Do Tampons Cause Toxic Shock Syndrome?",
-                  style: TextStyle(fontSize: 20.0, color: Colors.white)),
+              child: Text("Do Tampons Cause Toxic Shock Syndrome?".tr,
+                  style: const TextStyle(fontSize: 20.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -250,8 +245,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Can I Get Pregnant During My Period?",
-                  style: TextStyle(fontSize: 19.0, color: Colors.white)),
+              child: Text("Can I Get Pregnant During My Period?".tr,
+                  style: const TextStyle(fontSize: 19.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -266,8 +261,8 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("How Can I Control PMS Symptoms?",
-                  style: TextStyle(fontSize: 19.0, color: Colors.white)),
+              child: Text("How Can I Control PMS Symptoms?".tr,
+                  style: const TextStyle(fontSize: 19.0, color: Colors.white)),
             ),
           ],
         ),

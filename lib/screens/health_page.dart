@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:indu_wellness/constants.dart';
 import 'package:indu_wellness/screens/health_details.dart';
 import 'package:indu_wellness/screens/map_locator.dart';
@@ -18,7 +19,7 @@ class _HealthPageState extends State<HealthPage> {
       appBar: AppBar(
         backgroundColor: mainColor,
         automaticallyImplyLeading: false,
-        title: const Text("Health Analysis"),
+        title: Text("Health Analysis".tr),
         actions: [
           TextButton(
             onPressed: () {
@@ -29,9 +30,9 @@ class _HealthPageState extends State<HealthPage> {
                 ),
               );
             },
-            child: const Text(
-              "Yoga",
-              style: TextStyle(
+            child: Text(
+              "Yoga".tr,
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 255, 255, 255),
@@ -71,11 +72,11 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text(
-                "Menstrual Cramps",
+              child: Text(
+                "Menstrual Cramps".tr,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18.0,
                   color: Colors.white,
                 ),
@@ -94,10 +95,10 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Heavy Bleeding",
+              child: Text("Heavy Bleeding".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -112,10 +113,10 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Irregular Periods",
+              child: Text("Irregular Periods".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -130,10 +131,10 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Premenstrual Syndrome (PMS)",
+              child: Text("Premenstrual Syndrome (PMS)".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 17.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 17.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -148,10 +149,10 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Endometriosis",
+              child: Text("Endometriosis".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -167,10 +168,10 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Polycystic Ovary Syndrome (PCOS)",
+              child: Text("Polycystic Ovary Syndrome (PCOS)".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -185,11 +186,11 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Fibroids",
+              child: Text("Fibroids".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -204,10 +205,10 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Menorrhagia",
+              child: Text("Menorrhagia".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
@@ -222,10 +223,10 @@ class _HealthPageState extends State<HealthPage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("Amenorrhea",
+              child: Text("Amenorrhea".tr,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  style: const TextStyle(fontSize: 18.0, color: Colors.white)),
             ),
           ],
         ),
@@ -241,7 +242,7 @@ class _HealthPageState extends State<HealthPage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const MapLocator(),
+              builder: (context) => MapLocator(),
             ),
           );
         },

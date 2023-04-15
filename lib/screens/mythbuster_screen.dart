@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
 
 class MythBUsterPage extends StatefulWidget {
@@ -69,7 +70,7 @@ class _MythBUsterPageState extends State<MythBUsterPage> {
         backgroundColor: const Color.fromARGB(255, 56, 126, 59),
         elevation: 0,
         title: Text(
-          widget.title,
+          widget.title.tr,
           style: const TextStyle(fontSize: 16),
         ),
       ),
@@ -80,12 +81,12 @@ class _MythBUsterPageState extends State<MythBUsterPage> {
             children: [
               Text(
                 widget.index == 0
-                    ? problems[0]
+                    ? problems[0].tr
                     : widget.index == 1
-                        ? problems[1]
+                        ? problems[1].tr
                         : widget.index == 2
-                            ? problems[2]
-                            : problems[3],
+                            ? problems[2].tr
+                            : problems[3].tr,
                 style: const TextStyle(
                   fontSize: 20,
                 ),
@@ -118,7 +119,7 @@ class _MythBUsterPageState extends State<MythBUsterPage> {
                                 ),
                                 Center(
                                   child: Text(
-                                    isEnglish ? "English" : "Hindi",
+                                    isEnglish ? "English".tr : "Hindi".tr,
                                     style: const TextStyle(
                                       fontSize: 20,
                                       color: Colors.white,

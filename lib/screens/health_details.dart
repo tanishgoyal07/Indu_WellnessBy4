@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HealthDetailScreen extends StatefulWidget {
   final String title;
@@ -31,7 +32,7 @@ class _HealthDetailScreenState extends State<HealthDetailScreen> {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          widget.title,
+          widget.title.tr,
           style: const TextStyle(fontSize: 16),
         ),
       ),
