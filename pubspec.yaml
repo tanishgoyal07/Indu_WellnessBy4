@@ -38,9 +38,10 @@ dependencies:
   firebase_auth: ^4.4.1
   firebase_core: ^2.9.0
   google_sign_in: ^6.1.0
-  flutter_localizations:
-    sdk: flutter
-  intl: any
+  youtube_player_flutter: ^8.1.2
+  # flutter_localizations:
+  #   sdk: flutter
+  #   intl: any
 
 dev_dependencies:
   flutter_test:
