@@ -9,6 +9,7 @@ void main() async {
   runApp(const MyApp());
 }
 
+bool engLanguage = true;
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

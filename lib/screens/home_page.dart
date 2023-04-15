@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:indu_wellness/constants.dart';
+import 'package:indu_wellness/main.dart';
 import 'package:indu_wellness/screens/checking.dart';
 import 'package:indu_wellness/screens/education_infor.dart';
 import 'package:indu_wellness/screens/group_chat.dart';
@@ -13,6 +14,53 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  languageDialoxBox() {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return SimpleDialog(
+          title: const Text("Select Language"),
+          children: [
+            SimpleDialogOption(
+              padding: const EdgeInsets.all(20),
+              child: const Text(
+                "English",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+              onPressed: () {
+                setState(
+                  () {
+                    engLanguage = true;
+                  },
+                );
+                Navigator.of(context).pop();
+              },
+            ),
+            SimpleDialogOption(
+              padding: const EdgeInsets.all(20),
+              child: const Text(
+                "Hindi",
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+              onPressed: () {
+                setState(
+                  () {
+                    engLanguage = false;
+                  },
+                );
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +68,19 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: mainColor,
         automaticallyImplyLeading: false,
         title: Text("Hello, $displayName!"),
+        actions: [
+          TextButton(
+            onPressed: languageDialoxBox,
+            child: const Text(
+              "Language",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 255, 255, 255),
+              ),
+            ),
+          ),
+        ],
       ),
       body: Container(
         padding: const EdgeInsets.all(15),
@@ -34,7 +95,7 @@ class _HomePageState extends State<HomePage> {
           primary: false,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 1,
-            childAspectRatio: 1.5/0.5,
+            childAspectRatio: 1.5 / 0.5,
             crossAxisSpacing: 20,
             mainAxisSpacing: 30,
           ),
@@ -73,7 +134,9 @@ class _HomePageState extends State<HomePage> {
             ),
             TextButton(
               onPressed: () {
-                question(title: "What is a period and why do we have them?", index: 2);
+                question(
+                    title: "What is a period and why do we have them?",
+                    index: 2);
               },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -121,7 +184,10 @@ class _HomePageState extends State<HomePage> {
             ),
             TextButton(
               onPressed: () {
-                question(title: "What are sanitary pads? How to use and dispose of them?", index: 5);
+                question(
+                    title:
+                        "What are sanitary pads? How to use and dispose of them?",
+                    index: 5);
               },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -132,13 +198,13 @@ class _HomePageState extends State<HomePage> {
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18.0),
                   ))),
-              child: const Text("What are sanitary pads? How to use and dispose of them?",
+              child: const Text(
+                  "What are sanitary pads? How to use and dispose of them?",
                   style: TextStyle(fontSize: 20.0, color: Colors.white)),
             ),
             TextButton(
               onPressed: () {
-                question(
-                    title: "What If I Skip a Period?", index: 6);
+                question(title: "What If I Skip a Period?", index: 6);
               },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -155,7 +221,8 @@ class _HomePageState extends State<HomePage> {
             ),
             TextButton(
               onPressed: () {
-                question(title: "Do Tampons Cause Toxic Shock Syndrome?", index: 7);
+                question(
+                    title: "Do Tampons Cause Toxic Shock Syndrome?", index: 7);
               },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -171,7 +238,8 @@ class _HomePageState extends State<HomePage> {
             ),
             TextButton(
               onPressed: () {
-                question(title: "Can I Get Pregnant During My Period?", index: 8);
+                question(
+                    title: "Can I Get Pregnant During My Period?", index: 8);
               },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -187,8 +255,7 @@ class _HomePageState extends State<HomePage> {
             ),
             TextButton(
               onPressed: () {
-                question(
-                    title: "How Can I Control PMS Symptoms?", index: 9);
+                question(title: "How Can I Control PMS Symptoms?", index: 9);
               },
               style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsets>(
